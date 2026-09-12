@@ -1,12 +1,12 @@
 :root {
   --ink: #1b1d26;
-  --paper: #f3f5fb;
-  --surface: rgba(255, 255, 255, 0.9);
-  --signal: #4f46e5;
-  --signal-strong: #3730a3;
-  --line: #dfe5f2;
+  --paper: #f4f6fa;
+  --surface: #ffffff;
+  --signal: #2f5cff;
+  --signal-strong: #2147d8;
+  --line: #e7eaf1;
   --muted: #5f6477;
-  --shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+  --shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
 }
 
 * {
@@ -15,12 +15,7 @@
 
 body {
   margin: 0;
-  background: radial-gradient(
-    circle at top,
-    #f8f9ff 0%,
-    #eef3ff 32%,
-    #edf0f7 100%
-  );
+  background: #f4f6fa;
   color: var(--ink);
   font-family: "IBM Plex Sans", sans-serif;
 }
@@ -58,13 +53,12 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 24px;
   padding: 18px 28px;
-  border: 1px solid rgba(223, 229, 242, 0.9);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(109, 116, 145, 0.08);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
 .brand {
@@ -93,7 +87,7 @@ textarea {
 }
 .step-track-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--signal), #7c3aed);
+  background: var(--signal);
   transition: width 300ms ease;
   border-radius: 999px;
 }
@@ -133,7 +127,7 @@ textarea {
 }
 .step-tick.step-done .tick-mark {
   border-color: var(--signal);
-  background: linear-gradient(135deg, var(--signal), #7c3aed);
+  background: var(--signal);
   color: #fff;
 }
 .step-tick.step-active .tick-label {
@@ -145,8 +139,8 @@ textarea {
 .app-main {
   flex: 1;
   display: flex;
-  gap: 48px;
-  padding: 30px 8px 0;
+  gap: 16px;
+  padding: 20px 8px 0;
   align-items: flex-start;
 }
 .step-panel {
@@ -155,21 +149,21 @@ textarea {
 }
 .step-panel h2 {
   font-size: 19px;
-  margin: 0 0 20px;
+  margin: 0 0 18px;
   font-weight: 700;
 }
 .preview-panel {
-  width: 320px;
+  width: 270px;
   flex-shrink: 0;
   position: sticky;
-  top: 32px;
+  top: 20px;
 }
 
 /* type grid */
 .type-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 .type-tile {
   background: rgba(255, 255, 255, 0.86);
@@ -310,12 +304,12 @@ textarea {
   transform: translateY(-1px);
 }
 .nav-btn.primary {
-  background: linear-gradient(135deg, var(--ink), var(--signal));
+  background: var(--signal);
   color: var(--paper);
-  box-shadow: 0 12px 22px rgba(79, 70, 229, 0.18);
+  box-shadow: 0 8px 18px rgba(47, 92, 255, 0.16);
 }
 .nav-btn.primary:hover:not(:disabled) {
-  background: linear-gradient(135deg, var(--signal), var(--signal-strong));
+  background: var(--signal-strong);
 }
 .nav-btn:disabled {
   opacity: 0.45;
@@ -377,19 +371,19 @@ textarea {
   padding: 12px 24px;
   border-radius: 999px;
   border: none;
-  background: linear-gradient(135deg, var(--signal), #7c3aed);
+  background: var(--signal);
   color: #fff;
   font-weight: 700;
   font-size: 13px;
   cursor: pointer;
-  box-shadow: 0 14px 24px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 8px 18px rgba(47, 92, 255, 0.2);
   transition:
     transform 150ms ease,
     box-shadow 150ms ease;
 }
 .download-btn:hover:not(:disabled) {
   transform: translateY(-1px);
-  box-shadow: 0 18px 28px rgba(79, 70, 229, 0.28);
+  box-shadow: 0 10px 20px rgba(47, 92, 255, 0.2);
 }
 .download-btn:disabled {
   opacity: 0.4;
